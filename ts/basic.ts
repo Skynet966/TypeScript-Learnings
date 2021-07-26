@@ -1,17 +1,24 @@
-class Customer{
-    name: string;
-    constructor(name: string) {
-        this.name = name;
-    }
-    annouce():string {
-        return "Hello, My name is " + this.name;
-    }
+import axios from 'axios';
+
+interface Todo {
+	userId: number;
+	id: number;
+	title: string;
+	completed: boolean;
 }
 
 //create a new instance
-let firstCustomer:Customer = new Customer("satish yadav");
-let newMessage: string = firstCustomer.annouce();
+const url: string = 'https://jsonplaceholder.typicode.com/todos/1';
+axios
+	.get(url)
+	.then(response => {
+		const { id, title, completed } = response.data as Todo;
+		logTodo(id, title, completed);
+	})
+	.catch(errors => console.log(errors));
 
+const logTodo = (id: number, title: string, completed: boolean) =>
+	console.log(id, title, completed);
 //Change the text on the page
-let webHeading = document.querySelector('h1');
-webHeading!.textContent=newMessage;
+// let webHeading = document.querySelector('h1');
+// webHeading!.textContent = 'http';
