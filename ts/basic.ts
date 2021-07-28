@@ -21,4 +21,4 @@ const logTodo = (id: number, title: string, completed: boolean) =>
 	console.log(id, title, completed);
 //Change the text on the page
 // let webHeading = document.querySelector('h1');
-// webHeading!.textContent = 'http';
+// webHeading!.textContent = 'h';
