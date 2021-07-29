@@ -25,7 +25,49 @@ const point: { x: number; y: number } = { x: 20, y: 44.3 };
 const logNumber: (i: number) => void = (i: number) => {
 	console.log(i);
 };
+//function with type Annotation
+const sumOfNumbers = (a: number, b: number): number => {
+	return a + b;
+};
+//Named function
+function divideNumbers(a: number, b: number): number {
+	return a / b;
+}
+//Anananomous function assigned to a variable
+const multiplyNumbers = function (a: number, b: number): number {
+	return a * b;
+};
+//Void return type can return void or undefined
+const logger = (message: string): void => {
+	console.log(message);
+	// return void
+	// return undefined
+};
+//Never type is used when function not executed to the end and never return a value
+const neverReturnValue = (message: string): never => {
+	throw new Error(message);
+};
+//Destructure the object in parameter of function
+const destructParams = ({
+	date,
+	weather
+}: {
+	date: Date;
+	weather: string;
+}): void => {
+	console.log(date, weather);
+};
 
+//ES2015 Multi-level destructuring of object
+const profile = ({
+	name: { first, middle, last },
+	age
+}: {
+	name: { first: string; middle: string; last: string };
+	age: number;
+}): void => {
+	console.log(name, age);
+};
 //When to use annotations
 // 1) Function that return the 'any' type
 const json = '{"x":10,"y":20}';

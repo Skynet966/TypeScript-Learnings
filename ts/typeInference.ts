@@ -22,6 +22,6 @@ const max = new Max();
 const plot = { x: 2, y: 3 };
 
 //Function
-const logName = (name: string): void => {
+const logName = (name: string) => {
 	console.log(name);
 };
