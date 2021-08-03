@@ -1,3 +1,5 @@
+//Defination: Arrays where each element is some consistent type of values.
+
 //Type inference on initilization of array
 const carMakers = ['ford', 'toyota', 'chevy'];
 const dates = [new Date(), new Date()];

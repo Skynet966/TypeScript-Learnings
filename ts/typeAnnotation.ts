@@ -1,3 +1,5 @@
+//Defination: Code we add to tell Typescript what type of value a variable will refer to.
+
 //Premitives
 let apples: number = 5;
 let speed: string = 'fast';

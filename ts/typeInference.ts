@@ -1,3 +1,5 @@
+//Defination: Typescript trries to figure out itself what type of value a variale refer to.
+
 //Premitives
 let bananas = 5;
 let accleration = 'fast';
