@@ -17,9 +17,12 @@
 	},
 	"homepage": "https://github.com/Skynet966/TypeScript-Learnings#readme",
 	"dependencies": {
-		"axios": "^0.21.1"
+		"@types/googlemaps": "^3.43.3",
+		"axios": "^0.21.1",
+		"faker": "^5.5.3"
 	},
 	"devDependencies": {
+		"@types/faker": "^5.5.7",
 		"typescript": "^4.3.5"
 	}
 }
