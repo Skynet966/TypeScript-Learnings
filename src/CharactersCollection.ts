@@ -1,7 +1,9 @@
-import { ISortable } from './Sorter';
+import Sorter, { ISortable } from './Sorter';
 
-export default class CharactersCollection implements ISortable {
-	constructor(public data: string) {}
+export default class CharactersCollection extends Sorter implements ISortable {
+	constructor(public data: string) {
+		super();
+	}
 	printData(): void {
 		console.log(...this.data.split(''));
 	}

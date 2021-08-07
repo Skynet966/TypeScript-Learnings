@@ -1,19 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Sorter = (function () {
-    function Sorter(collection) {
-        this.collection = collection;
+    function Sorter() {
     }
     Sorter.prototype.printData = function () {
         console.log('-----Data Values-----');
-        this.collection.printData();
+        this.printData();
         console.log('---------END---------');
     };
     Sorter.prototype.sort = function () {
-        var length = this.collection.length;
+        var length = this.length;
         for (var i = 0; i < length; i++) {
             for (var j = 0; j < length - i - 1; j++) {
-                this.collection.compare(j) ? this.collection.swap(j) : null;
+                this.compare(j) ? this.swap(j) : null;
             }
         }
     };
