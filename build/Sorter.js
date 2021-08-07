@@ -3,11 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Sorter = (function () {
     function Sorter() {
     }
-    Sorter.prototype.printData = function () {
-        console.log('-----Data Values-----');
-        this.printData();
-        console.log('---------END---------');
-    };
     Sorter.prototype.sort = function () {
         var length = this.length;
         for (var i = 0; i < length; i++) {

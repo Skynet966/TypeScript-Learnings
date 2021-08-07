@@ -11,11 +11,6 @@ export interface ISortable {
 
 //Generic Sorting logic
 export default abstract class Sorter implements ISortable {
-	printData(): void {
-		console.log('-----Data Values-----');
-		this.printData();
-		console.log('---------END---------');
-	}
 	sort(): void {
 		const { length } = this;
 		for (let i = 0; i < length; i++) {
@@ -28,4 +23,5 @@ export default abstract class Sorter implements ISortable {
 	abstract get length(): number;
 	abstract swap(leftIndex: number): void;
 	abstract compare(leftIndex: number): boolean;
+	abstract printData(): void;
 }
