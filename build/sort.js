@@ -1,26 +1,19 @@
 "use strict";
-var Sorter = (function () {
-    function Sorter(collection) {
-        this.collection = collection;
-    }
-    Sorter.prototype.sort = function () {
-        var length = this.collection.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length - i - 1; j++) {
-                if (this.collection instanceof Array &&
-                    this.collection[j] > this.collection[j + 1]) {
-                    var leftHand = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = leftHand;
-                }
-                else if (typeof this.collection === 'string') {
-                }
-            }
-        }
-    };
-    return Sorter;
-}());
-var sorter = new Sorter([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-sorter.sort();
-console.log(sorter.collection);
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var Sorter_1 = __importDefault(require("./Sorter"));
+var NumbersCollection_1 = __importDefault(require("./NumbersCollection"));
+var CharactersCollection_1 = __importDefault(require("./CharactersCollection"));
+var charactersCollection = new CharactersCollection_1.default('satish');
+var numbersCollection = new NumbersCollection_1.default([7, 6, 5, 4, 3, 2, 1]);
+var charSorter = new Sorter_1.default(charactersCollection);
+var numbSorter = new Sorter_1.default(numbersCollection);
+charSorter.printData();
+charSorter.sort();
+charSorter.printData();
+numbSorter.printData();
+numbSorter.sort();
+numbSorter.printData();
 //# sourceMappingURL=sort.js.map

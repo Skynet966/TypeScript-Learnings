@@ -1,24 +1,18 @@
-//Sorting logic for the array of numbers
-class Sorter {
-	constructor(public collection: number[] | string) {}
-	sort(): void {
-		const { length } = this.collection;
-		for (let i = 0; i < length; i++) {
-			for (let j = 0; j < length - i - 1; j++) {
-				if (
-					this.collection instanceof Array &&
-					this.collection[j] > this.collection[j + 1]
-				) {
-					let leftHand = this.collection[j];
-					this.collection[j] = this.collection[j + 1];
-					this.collection[j + 1] = leftHand;
-				} else if (typeof this.collection === 'string') {
-				}
-			}
-		}
-	}
-}
+import Sorter from './Sorter';
+import NumebrsCollection from './NumbersCollection';
+import CharactersCollection from './CharactersCollection';
 
-const sorter = new Sorter([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-sorter.sort();
-console.log(sorter.collection);
+const charactersCollection = new CharactersCollection('satish');
+const numbersCollection = new NumebrsCollection([7, 6, 5, 4, 3, 2, 1]);
+const charSorter = new Sorter(charactersCollection);
+const numbSorter = new Sorter(numbersCollection);
+
+//Sorting and print charactersCollection
+charSorter.printData();
+charSorter.sort();
+charSorter.printData();
+
+//Sorting and print numbersCollection
+numbSorter.printData();
+numbSorter.sort();
+numbSorter.printData();
