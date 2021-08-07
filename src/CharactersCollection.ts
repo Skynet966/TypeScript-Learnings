@@ -1,6 +1,6 @@
-import Sorter, { ISortable } from './Sorter';
+import Sorter from './Sorter';
 
-export default class CharactersCollection extends Sorter implements ISortable {
+export default class CharactersCollection extends Sorter {
 	constructor(public data: string) {
 		super();
 	}

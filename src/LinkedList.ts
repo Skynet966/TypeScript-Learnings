@@ -1,11 +1,11 @@
-import Sorter, { ISortable } from './Sorter';
+import Sorter from './Sorter';
 
 class Node {
 	next: Node | null = null;
 	constructor(public data: number) {}
 }
 
-export default class LinkedList extends Sorter implements ISortable {
+export default class LinkedList extends Sorter {
 	head: Node | null = null;
 
 	add(data: number): void {
