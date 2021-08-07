@@ -12,13 +12,13 @@ export default class LinkedList implements ISortable {
 		const node = new Node(data);
 		if (!this.head) {
 			this.head = node;
+		} else {
+			let tail = this.head;
+			while (tail.next) {
+				tail = tail.next;
+			}
+			tail.next = node;
 		}
-
-		let tail = this.head;
-		while (tail.next) {
-			tail = tail.next;
-		}
-		tail.next = node;
 	}
 	get length(): number {
 		if (!this.head) {
@@ -70,11 +70,12 @@ export default class LinkedList implements ISortable {
 		if (!this.head) {
 			console.log('List is empty!');
 		}
-		let node = this.head;
+		let node: Node | null = this.head;
+		let list: string = 'START-->';
 		while (node) {
-			console.log(`[${node.data}]-->`);
+			list += `[${node.data}]-->`;
 			node = node.next;
 		}
-		console.log('Nothing there!!!');
+		console.log(list + 'END');
 	}
 }

@@ -16,11 +16,13 @@ var LinkedList = (function () {
         if (!this.head) {
             this.head = node;
         }
-        var tail = this.head;
-        while (tail.next) {
-            tail = tail.next;
+        else {
+            var tail = this.head;
+            while (tail.next) {
+                tail = tail.next;
+            }
+            tail.next = node;
         }
-        tail.next = node;
     };
     Object.defineProperty(LinkedList.prototype, "length", {
         get: function () {
@@ -74,11 +76,12 @@ var LinkedList = (function () {
             console.log('List is empty!');
         }
         var node = this.head;
+        var list = 'START-->';
         while (node) {
-            console.log("[" + node.data + "]-->");
+            list += "[" + node.data + "]-->";
             node = node.next;
         }
-        console.log('Nothing there!!!');
+        console.log(list + 'END');
     };
     return LinkedList;
 }());
