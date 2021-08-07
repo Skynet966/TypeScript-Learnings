@@ -1,24 +1,24 @@
 "use strict";
-const oldCivic = {
+var oldCivic = {
     name: 'civic',
     year: new Date(),
     broken: true,
-    summary() {
-        return `Name: ${this.name} Year: ${this.year} Broken?: ${this.broken}`;
+    summary: function () {
+        return "Name: " + this.name + " Year: " + this.year + " Broken?: " + this.broken;
     }
 };
-const beverage = {
+var beverage = {
     color: 'brown',
     carbonated: true,
     sugar: 40,
-    summary() {
-        return `My drink has ${this.sugar} grams of sugar.`;
+    summary: function () {
+        return "My drink has " + this.sugar + " grams of sugar.";
     }
 };
-const printVehicle = (vehicle) => {
+var printVehicle = function (vehicle) {
     console.log(vehicle.summary());
 };
-const printSummary = (item) => {
+var printSummary = function (item) {
     console.log(item.summary());
 };
 printVehicle(oldCivic);

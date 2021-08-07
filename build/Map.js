@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Map {
-    googleMap;
-    constructor(divId) {
-        const mapDiv = document.getElementById(divId);
+var Map = (function () {
+    function Map(divId) {
+        var mapDiv = document.getElementById(divId);
         if (mapDiv !== null) {
             this.googleMap = new google.maps.Map(mapDiv, {
                 zoom: 1,
@@ -11,9 +10,10 @@ class Map {
             });
         }
     }
-    addMarker(mappable, label) {
-        const marker = new google.maps.Marker({
-            label,
+    Map.prototype.addMarker = function (mappable, label) {
+        var _this = this;
+        var marker = new google.maps.Marker({
+            label: label,
             title: mappable.name,
             map: this.googleMap,
             position: {
@@ -21,13 +21,14 @@ class Map {
                 lng: mappable.location.lng
             }
         });
-        marker.addListener('click', () => {
-            const infoWindow = new google.maps.InfoWindow({
+        marker.addListener('click', function () {
+            var infoWindow = new google.maps.InfoWindow({
                 content: mappable.markerContent()
             });
-            infoWindow.open(this.googleMap, marker);
+            infoWindow.open(_this.googleMap, marker);
         });
-    }
-}
+    };
+    return Map;
+}());
 exports.default = Map;
 //# sourceMappingURL=Map.js.map
