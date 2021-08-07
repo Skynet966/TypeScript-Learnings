@@ -1,7 +1,3 @@
-import CharactersCollection from './CharactersCollection';
-import NumebrsCollection from './NumbersCollection';
-import LinkedList from './LinkedList';
-
 export interface ISortable {
 	get length(): number;
 	swap(leftIndex: number): void;
