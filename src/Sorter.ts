@@ -1,5 +1,6 @@
 import CharactersCollection from './CharactersCollection';
 import NumebrsCollection from './NumbersCollection';
+import LinkedList from './LinkList';
 
 export interface ISortable {
 	get length(): number;
@@ -15,7 +16,9 @@ interface ISorter {
 
 //Generic Sorting logic
 export default class Sorter implements ISorter {
-	constructor(private collection: NumebrsCollection | CharactersCollection) {}
+	constructor(
+		private collection: NumebrsCollection | CharactersCollection | LinkedList
+	) {}
 	printData(): void {
 		console.log('-----Data Values-----');
 		this.collection.printData();
