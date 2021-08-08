@@ -1,13 +1,8 @@
+import { MatchResult } from './MatchResult';
 import CsvFileReader from './CsvFileReader';
 
 const reader = new CsvFileReader('football.csv');
 reader.read();
-//enum is used to denote the match final status which is closely related
-enum MatchResult {
-	HomeWin = 'H',
-	AwayWin = 'A',
-	Draw = 'D'
-}
 
 let manUnitedWins = 0;
 
@@ -19,4 +14,4 @@ for (let match of reader.data) {
 	}
 }
 
-console.log('Man United win ' + manUnitedWins + ' games.');
+console.log('Man United won ' + manUnitedWins + ' games.');
