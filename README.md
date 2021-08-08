@@ -1,6 +1,6 @@
 # TypeScript-Learnings
 
-This is a basic plus project to understand more advanced concepts in categories manner and take a deep look inside typescript.
+This is a basic plus project to understand more advanced concepts in categorize manner and take a deep look inside typescript.
 
 #### Run cmd: node ./build/<filename>.js
 
