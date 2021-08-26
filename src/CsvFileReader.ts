@@ -1,4 +1,3 @@
-import { dateStringToDate } from './utils';
 import { readFileSync } from 'fs';
 
 export default class CsvFileReader {
