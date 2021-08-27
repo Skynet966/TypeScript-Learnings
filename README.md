@@ -15,4 +15,4 @@ Handle data, used to represent Users, Blog Posts, Images, etc.
 
 #### View Classes
 
-Handle HTML and events caused by the user **like clicks, typing, hitting enter key, etc**.
+Handle HTML and events caused by the user like *clicks, typing, hitting enter key, etc*.
