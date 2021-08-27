@@ -16,5 +16,8 @@
 	"homepage": "https://github.com/Skynet966/TypeScript-Learnings#readme",
 	"dependencies": {
 		"axios": "^0.21.1"
+	},
+	"devDependencies": {
+		"typescript": "^4.4.2"
 	}
 }

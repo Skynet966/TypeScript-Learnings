@@ -1,8 +1,8 @@
 # TypeScript-Learnings
-This is just a basic project to understand and take a glace of typescript.
+
+This is a project to make understand advance
+ concepts and build a working Web framework with the use of Typescript.
 
 #### Run cmd: parcel index.html
 
 ## Project Description
-In this project we are going to request __jsonplaceholder__ using axios get_request to fetch todo whose id is "1".
-Then show the todo details like Id, title and completed into h2, h3 and h4 tags inside index.html.
