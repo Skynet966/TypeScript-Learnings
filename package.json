@@ -3,7 +3,11 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"scripts": {},
+	"scripts": {
+		"start:db": "json-server -w db.json",
+		"start:parcel": "parcel index.html",
+		"start": "npm-run-all -p start:db start:parcel"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Skynet966/TypeScript-Learnings.git"
@@ -15,9 +19,12 @@
 	},
 	"homepage": "https://github.com/Skynet966/TypeScript-Learnings#readme",
 	"dependencies": {
-		"axios": "^0.21.1"
+		"axios": "^0.21.4"
 	},
 	"devDependencies": {
-		"typescript": "^4.4.2"
+		"typescript": "^4.4.2",
+		"npm-run-all": "4.1.5",
+		"parcel": "2.0.1",
+		"json-server": "0.17.0"
 	}
 }
