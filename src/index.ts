@@ -15,5 +15,3 @@ user.save();
 // };
 
 // colors.printColor();
-
-//We have now

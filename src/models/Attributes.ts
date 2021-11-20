@@ -5,13 +5,16 @@ export default class Attributes<T> {
 
 	// Get the piece of data from object.
 	// K can only ever be of the Key of T
-	get<K extends keyof T>(key: K): T[K] {
-		return this.data[key];
-	}
+	get = <K extends keyof T>(key: K): T[K] => this.data[key];
 
 	// Set the data to the object.
 	set(update: T): void {
 		Object.assign(this.data, update);
+	}
+
+	// Get all props
+	getAll(): T {
+		return this.data;
 	}
 }
 
