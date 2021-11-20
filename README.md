@@ -32,3 +32,5 @@ trigger(eventName: string): void :- Triggers an event to tell other parts of the
 fetch(): Promise :- Fetches some data from the server about a particular user.
 
 save(): Promise :- Saves some data about this user to the server.
+
+// In Typescript, strings can be types <==> In JS (and therefore TS), all object keys are strings
