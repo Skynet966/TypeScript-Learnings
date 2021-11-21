@@ -6,7 +6,7 @@ interface HasId {
 	id?: number;
 }
 // Generic class to save and fetch the data from server.
-export default class Sync<T extends HasId> {
+export default class ApiSync<T extends HasId> {
 	// Initilize the Class and set the Uniform name locator
 	// which is the sub path to the URL
 	constructor(public Unl: string) {}

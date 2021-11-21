@@ -1,17 +1,10 @@
-import User from './models/User';
+import Collection from './models/Collection';
+import User, { UserProps } from './models/User';
 
-const user = new User({ id: 1, name: 'punit', age: 12 });
-
-user.on('change', () => console.log(user));
-user.on('save', () => console.log('user has been saved ::: ', user));
-user.save();
-
-//Reminder on how 'this' works in javascript
-// const colors = {
-// 	color: 'red',
-// 	printColor() {
-// 		console.log(this.color);
-// 	}
-// };
-
-// colors.printColor();
+const collection = new Collection<User, UserProps>('users', (json: UserProps) =>
+	User.buildUser(json)
+);
+collection.on('change', () =>
+	console.log('Collection has been changed:::', collection)
+);
+collection.fetch();
