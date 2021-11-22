@@ -34,3 +34,12 @@ fetch(): Promise :- Fetches some data from the server about a particular user.
 save(): Promise :- Saves some data about this user to the server.
 
 // In Typescript, strings can be types <==> In JS (and therefore TS), all object keys are strings
+
+#### Rendering Timeline
+
+| Call _'render'_ method
+˅ Render calls _'template'_, gets HTML sring
+| Render inserts HTML string into a template element
+˅ WE should somehow bind event handler to the HTML in there
+| Render inserts content of template into DOM
+˅
