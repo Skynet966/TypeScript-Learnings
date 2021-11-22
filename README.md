@@ -43,6 +43,12 @@ save(): Promise :- Saves some data about this user to the server.
 
 ###### ˅ Render inserts HTML string into a template element
 
-###### ˅ WE should somehow bind event handler to the HTML in there
+###### ˅ Bind event handlers to the HTML in the template element
+
+###### ˅ Call _'regionMap'_ fro list of regions that need to be created
+
+###### ˅ Render method populates values in _'regions'_
+
+###### ˅ We somehow insert new _'child'_ vies in those regions
 
 ###### ˅ Render inserts content of template into DOM
