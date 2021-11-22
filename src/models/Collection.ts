@@ -21,7 +21,7 @@ export default class Collection<T, M> {
 			response.data.forEach((value: M) => {
 				this.models.push(this.deserialize(value));
 			});
+			this.trigger('change');
 		});
-		this.trigger('change');
 	}
 }
