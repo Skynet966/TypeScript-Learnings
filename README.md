@@ -9,46 +9,13 @@ concepts of TS and build a working Web framework with the use of Typescript.
 
 We have two types of classes **Model** and **View** they both have diffrent functionlity in our project.
 
-#### Model Classes
+Typescript has a distinct OOP style
 
-Handle data, used to represent Users, Blog Posts, Images, etc.
+Many popular JS libs were written before JS ahad any solid idea of 'classes'
 
-#### View Classes
+Integrating TS with popular JS libs can be tough
 
-Handle HTML and events caused by the user like _clicks, typing, hitting enter key, etc_.
-
-## User Class
-
-private data: UserProps :- Object to store information about a particular user (name, age).
-
-get(propName:string):(string| number) :- Gets a single piece of info about this user (name, age).
-
-set(update: UserProps):void :- Changes information about this user (name, age).
-
-on(eventName:string,callback:()=>{}) :- Registers an event handler with this object, so other parts of the app know when something changes.
-
-trigger(eventName: string): void :- Triggers an event to tell other parts of the app that something has changed.
-
-fetch(): Promise :- Fetches some data from the server about a particular user.
-
-save(): Promise :- Saves some data about this user to the server.
-
-// In Typescript, strings can be types <==> In JS (and therefore TS), all object keys are strings
-
-#### Rendering Timeline
-
-###### ˅ Call _'render'_ method
-
-###### ˅ Render calls _'template'_, gets HTML sring
-
-###### ˅ Render inserts HTML string into a template element
-
-###### ˅ Bind event handlers to the HTML in the template element
-
-###### ˅ Call _'regionMap'_ fro list of regions that need to be created
-
-###### ˅ Render method populates values in _'regions'_
-
-###### ˅ We somehow insert new _'child'_ vies in those regions
-
-###### ˅ Render inserts content of template into DOM
+TS with JS libs
+use the lib normally, adding in basic type annotations where possible
+Use a TS adapter library that has helpers for using your lib with TS
+Twist your lib to work with TS classes

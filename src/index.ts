@@ -1,15 +1,10 @@
-import User, { UserProps } from './models/User';
-import Collection from './models/Collection';
-import UserList from './views/UserList';
+import bodyParser from 'body-parser';
+import express from 'express';
+import router from './routes/loginRoutes';
 
-const users = new Collection('users', (json: UserProps) => {
-	return User.buildUser(json);
-});
-
-users.on('change', () => {
-	const root = document.getElementById('root');
-	if (root) {
-		new UserList(root, users).render();
-	}
-});
-users.fetch();
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(router);
+app.listen(3000, () =>
+	console.log('Server is on and ready... http://localhost:3000/')
+);
