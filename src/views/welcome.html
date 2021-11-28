@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/_header.html') %>
+
+    <body>
+        <main class="container">
+            <section class="row align-middle vh-100 justify-content-center align-items-center">
+                <div class="col-12 col-sm-8 col-md-7 col-lg-5">
+                    <div class="rounded border shadow form-container px-4 py-3">
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>
+                                <% if (isLoggedIn) { %>
+                                    You are already logged In... <a href="/logout">Logout now</a>
+                                    <% }else { %>
+                                        You are not logged In. Try to login...
+                                        <a href="/login">Login here!!</a>
+                                        <% } %>
+                            </p>
+                            <hr>
+                            <p class='mb-2'>
+                                Trying to go to the <a href='/protected'>Protected route</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('./partials/_footer.html') %>
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/_header.html') %>
+
+    <body>
+        <main class="container">
+            <section class="row align-middle vh-100 justify-content-center align-items-center">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5">
+                    <div class="rounded border shadow form-container px-4 py-3">
+                        <% if (isLoggedIn) { %>
+                            <div class="alert alert-success" role="alert">
+                                <p>
+                                    Wow!! You have access to Protected route.
+                                </p>
+                                <hr>
+                                <p>
+                                    Go back to <a href="/" class="alert-link">Home</a>
+                                </p>
+                            </div>
+                            <% }else { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <p>Oh! no you don't have access to Protected route.</p>
+                                    <hr>
+                                    <p>Auto redirect to login page in
+                                        <strong id="counter" class="alert-link">5</strong>
+                                    </p>
+                                    <script>
+                                        (function ()
+                                        {
+                                            let count = 4;
+                                            const counter = document.getElementById('counter');
+                                            setInterval(() => { counter.innerHTML = count; count -= 1; }, 1000);
+                                            setTimeout(() => window.location.replace("/login"), 5000);
+                                        })()
+                                    </script>
+                                </div>
+                                <% } %>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('./partials/_footer.html') %>
+    </body>
+
+</html>
